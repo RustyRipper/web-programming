@@ -1,0 +1,47 @@
+.row {   
+    position: static;
+    height: 300px;
+    border: 3px solid #73AD21;
+    width: 90%;
+    left: 30px;
+}
+.gallery {
+    
+    float: right;
+    width: 20%;
+    padding: 10px;
+    margin: 20px 20px 20px 20px;
+    background-clip: content-box; 
+    box-shadow: inset 0 0 0 10px lightGreen;
+    
+  }
+.gallery  img {
+    max-width: 100%;
+    height: auto;
+}
+.row2 {   
+    position: relative;
+    height: 300px;
+    width: 90%;
+    border: 3px solid #73AD21;
+    left: 30px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    right: 10%;
+    width: 100px;
+    background-color: aquamarine;
+}
+.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    background-color: blueviolet;
+    text-align: center;
+    
+}

@@ -1,0 +1,16 @@
+div > section > p {
+    width: 50%;
+    font-size: xx-large;
+    font-weight: 800;
+    background-color:rgb(10, 129, 189);
+    text-decoration: line-through;
+    text-decoration-style:wavy;
+
+}
+
+div > section > h3 {
+    width: 50%;
+    font-size: xx-small;
+    font-weight: 800;
+    text-decoration: overline underline dotted green;
+}

@@ -1,0 +1,19 @@
+.even {
+    background-color: pink;
+}
+
+.odd {
+    background-color: aqua;
+}
+th {
+    background-color: yellow;
+}
+
+table {
+    width: 100px;
+    border: 1px solid black;
+
+}
+#size{
+    width: 100px;
+}

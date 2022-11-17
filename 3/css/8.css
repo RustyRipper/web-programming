@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
+  }
+  
+  caption {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    color: #333;
+  }
+  
+  
+  th, td {
+    border: 4px solid black;
+    padding: 20px;
+  }
+
+  tbody th {
+    background-color: #36c;
+    color: #fff;
+    
+  }
+  thead {
+    background-color: #36c;
+    color: white;
+  }
+  tbody td {
+    font-weight: 800;
+    font-size: 20px;
+  }
+  
+ .X {
+    background-color: black;
+ }

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maciej Makara">
+    <meta name="keywords" content="html5, .net, pwr">
+    <meta name="description" content="Zadanka z listy2 .NET ">
+    <meta http-equiv="refresh" content="200">
+    <title>LISTA 2</title>
+</head>
+
+<body>
+    <h2 id="start">a)</h2>
+    <h3>&Psi; &IOcy; &Qfr; &qscr; &quest;</h3>
+    <h2>b)</h2>
+    <strong>strong</strong>
+    <em>em</em>
+    <small>small</small>
+    <del>del</del>
+    <ins>ins</ins>
+    <h2>c)</h2>
+    <ol>
+        <li>raz</li>
+        <li>dwa</li>
+        <li>trzy</li>
+    </ol>
+    <h2>d)</h2>
+    <ul>
+        <li>raz</li>
+        <li>dwa</li>
+        <li>trzy</li>
+    </ul>
+    <h2>e)</h2>
+    <dl>
+        <dt>raz</dt>
+        <dd>dwa</dd>
+        <dt>trzy</dt>
+        <dd>cztery</dd>
+    </dl>
+    <h2 id="list">f)</h2>
+    <ul>
+        <li>Element 1 - Poziom 1
+            <ol>
+                <li>Element 1 - Poziom 2
+                    <ul>
+                        <li>Element 1 - Poziom 3
+                            <ol>
+                                <li>Element 1 - Poziom 4</li>
+                                <li>Element 2 - Poziom 4</li>
+                            </ol>
+                        </li>
+                        <li>Element 2 - Poziom 3</li>
+                    </ul>
+                </li>
+                <li>Element 2 - Poziom 2</li>
+            </ol>
+        </li>
+        <li>Element 2 - Poziom 1</li>
+    </ul>
+    
+    <h2 id="table">g)</h2>
+    <table border="7">
+        <thead>
+            <tr>
+                <th colspan="5">Plan zajęć</th>
+            </tr>
+            <tr>
+                <th>Pon</th>
+                <th>Wt</th>
+                <th>Śr</th>
+                <th>Czw</th>
+                <th>Pt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2" rowspan="2" style="text-align: center; vertical-align: middle;"> Wolne </td>
+                <td colspan="3" style="text-align: center; vertical-align: middle;">Wolne</td>
+            </tr>
+            <tr>
+                <td>Ćw .Net</td>
+                <td rowspan="2">Wykład .Net</td>
+                <td>Lab .Net</td>
+            </tr>
+            <tr>
+                <td>Lab .Net</td>
+                <td>Ćw .Net</td>
+                <td>Lab .Net</td>
+                <td>Ćw .Net</td>
+            </tr>
+            <tr>
+                <td>Lab .Net</td>
+                <td>Ćw .Net</td>
+                <td>Lab .Net</td>
+                <td>Ćw .Net</td>
+                <td>Ćw .Net</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center; vertical-align: middle;">Wolne</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="5">Zima 2022/2023</th>
+            </tr>
+
+        </tfoot>
+    </table>
+
+    <h2 id="form">h)</h2>
+    <!-- <form method="post" action="superweb.mydomain.com/userinfo.html"> -->
+    <form method="post" action="http://127.0.0.1:5500/lista2.html">
+        <p>
+            <label for="fname">Imię:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Nazwisko:</label><br>
+            <input type="text" id="lname" name="lname">
+        </p>
+        <p>
+            <label for="tel">Telefon:</label><br>
+            <input type="tel" id="tel" name="tel"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="30">
+        </p>
+        <p>
+            <input type="hidden" id="refId" name="refId" value="3487">
+        </p>
+        <p>
+            <label for="idPass">Kod klienta:</label>
+            <input id="idPass" name="Name" type="password" size="30" maxlength="50">
+        </p>
+        <p>
+            <label for="color">Kolor opakowania:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label>Jak ocenisz zakupy w naszym sklepie:</label>
+            <label><input name="grade" type="radio" value="grade1">1</label>
+            <label><input name="grade" type="radio" value="grade2">2</label>
+            <label><input name="grade" type="radio" value="grade3">3</label>
+            <label><input name="grade" type="radio" value="grade4">4</label>
+            <label><input name="grade" type="radio" value="grade5" checked>5</label>
+        </p>
+        <p>
+            <label>W jaki dzień tygodnia chciałbyś otrzymać przesyłke?
+                <select name="weekday">
+                    <option>Pon</option>
+                    <option>Wt</option>
+                    <option>Śr</option>
+                    <option>Czw</option>
+                    <option>Pt</option>
+                </select>
+            </label>
+        </p>
+        <label>Wytyczne dla sprzedającego</label>
+        <p>
+            <textarea name="descr" cols="30" rows="3">Opis</textarea>
+        </p>
+        <p>
+            <label>Zaakceptuj regulaminy naszego sklepu</label><br>
+            <label><input name="rules" type="checkbox" value="Rule1" checked>Regulamin sklepu*</label><br>
+            <label><input name="rules" type="checkbox" value="Rule2">Regulamin zwrotów*</label><br>
+            <label><input name="rules" type="checkbox" value="Rule3">Newsletter</label>
+        </p>
+        <p>
+            <input type="submit" value="Potwierdź">
+            <input type="reset" value="Zresetuj">
+        </p>
+
+    </form>
+
+    <h2>i)</h2>
+    <p>
+        <a href="#start">Idź na początek strony</a>
+        <a href="#table">Idź do tabeli</a>
+        <a href="#list">Idź do list</a>
+        <a href="#form">Idź do formularza</a>
+    </p>
+
+    <h2>j)</h2>
+    <h2>k)</h2>
+    <header>To jest Header</header><br>
+    <h1>naglowek</h1>
+    <article>
+        <h2>1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dolor ex quo, temporibus culpa ut
+            placeat impedit assumenda dolores et ipsum, cum voluptas nesciunt sed exercitationem ea ipsa eum
+            repudiandae.</p>
+    </article><br>
+    <footer>Stopka</footer>
+
+
+
+
+    <h2 id="modification">modification</h2>
+    <table border="7">
+        <thead>
+            <tr>
+                <th>A</th>
+                <th colspan="3">&lt;TABLE&gt;</th>
+                <th>B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> C </td>
+                <td> D </td>
+                <td> E </td>
+                <td colspan="2" rowspan="2" style="text-align: center; vertical-align: middle;"><img width="20"
+                        src="1.png" alt="1.png"></td>
+            </tr>
+            <tr>
+
+                <td colspan="2" rowspan="2" style="text-align: center; vertical-align: middle;">@</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+
+                <th>J</th>
+                <th>K</th>
+                <th colspan="3" style="text-align: center; vertical-align: middle;"><a
+                        href="https://www.google.com">google</a></th>
+            </tr>
+
+        </tfoot>
+    </table>
+</body>
+
+</html>

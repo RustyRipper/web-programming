@@ -1,0 +1,8 @@
+.example_border {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-color: green;
+    border-width: 50px;
+    border-style: dashed;
+}

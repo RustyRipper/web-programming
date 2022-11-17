@@ -1,0 +1,15 @@
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.exe
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.deps.json
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.runtimeconfig.json
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.runtimeconfig.dev.json
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.dll
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\ref\delta.dll
+D:\studia\sem5\.NET\5\1\delta\delta\bin\Release\net5.0\delta.pdb
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.GeneratedMSBuildEditorConfig.editorconfig
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.AssemblyInfoInputs.cache
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.AssemblyInfo.cs
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.csproj.CoreCompileInputs.cache
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.dll
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\ref\delta.dll
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.pdb
+D:\studia\sem5\.NET\5\1\delta\delta\obj\Release\net5.0\delta.genruntimeconfig.cache

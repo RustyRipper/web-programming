@@ -1,0 +1,67 @@
+.top-gap {
+    height: 20px;
+}
+
+nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    font-weight: bold;
+    color: yellow;
+    border: 3px solid pink;
+    text-align: center;
+    width: 10em;
+    background-color: blueviolet;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav:hover ul {
+    display: block;
+}
+
+nav ul li {
+    height: 20px;
+    border-top: 3px solid pink;
+    background-color: lightblue;
+    width: 10em;
+    color: black;
+
+}
+
+nav ul li:hover {
+    background-color: aqua;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* dodane */
+
+.menu2 {
+    display: none;
+    position: relative;
+    left: 10em;
+    top: -20px;
+}
+
+.subnav:hover>.menu2 {
+    display: block;
+
+}
+
+.subnav:hover>.subnav {
+    width: 20em;
+
+}
+
+.menu2 ul li {
+    background-color: orange;
+}

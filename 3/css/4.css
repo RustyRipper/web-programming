@@ -1,0 +1,17 @@
+p {
+    font-size: 20px;
+}
+#example_id {
+    color:aqua
+}
+
+.example_class {
+    color: red
+}
+
+article > p {
+    color: blue;
+}
+article p {
+    font-size: 30px;
+}

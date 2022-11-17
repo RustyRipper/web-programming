@@ -1,0 +1,22 @@
+.two {
+    background-color: pink;
+}
+.one {
+    background-color: aqua;
+}
+
+.zero {
+    background-color: green;
+}
+th {
+    background-color: yellow;
+}
+
+table {
+    width: 100px;
+    border: 1px solid black;
+
+}
+#size{
+    width: 100px;
+}

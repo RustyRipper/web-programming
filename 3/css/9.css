@@ -1,0 +1,22 @@
+ul {
+    margin-left: 100px;
+}
+::marker { 
+    color: red;
+    font-size: 50px;
+}
+
+::selection {
+    color: green;
+    background: yellow;
+}  
+input {
+    margin-left: 10px;
+}
+input:optional {
+    background-color: grey;
+
+}
+input:read-only {
+    background-color: palegoldenrod;
+}
