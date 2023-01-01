@@ -1,0 +1,70 @@
+﻿@model IEnumerable<List10.Models.Article>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<section class="left" width: 30%;>
+    <ul style="list-style-type: none;">
+        <li><a asp-action="Index"><b>Wszystko</b></a></li>
+
+        @foreach (var item in ViewBag.Category)
+        {
+            <li><a asp-action="List" asp-route-id="@item.Id"><b>@item.Name</b></a></li>
+        }
+    </ul>
+</section>
+
+<div>
+    <a asp-action="Cart" class="btn btn-secondary" style="float: right">Cart</a>
+</div>
+
+<section class="right" width: 60%;>
+    <h1>Shop</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FormFile)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var pathToFile = item.FilePath != null ? "/upload/" + item.FilePath : "/image/" + "No.png";
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    <img style="height:50px" src="@pathToFile" />
+                </td>
+                <td>
+                    @using (Html.BeginForm("AddToCart", "Shop", new { id = item.Id }, FormMethod.Post))
+                    {
+                        <button type="submit" class="btn btn-success">Add to cart</button>
+                    }
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</section>
