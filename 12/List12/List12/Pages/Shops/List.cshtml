@@ -1,36 +1,35 @@
-﻿@model IEnumerable<List10.Models.Article>
+﻿@page
+@model List12.Pages.Shops.ListModel
 
 @{
     ViewData["Title"] = "List";
 }
 
 <h1>List</h1>
-
 <p>
-    @ViewBag.myCategory
+    @ViewBag.Category
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Article[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Article[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category)
+                @Html.DisplayNameFor(model => model.Article[0].FilePath)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FormFile)
+                @Html.DisplayNameFor(model => model.Article[0].Category)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-        var pathToFile = item.FilePath != null ? "/upload/" + item.FilePath : "/image/" + "No.png";
+@foreach (var item in Model.Article) {
+    var pathToFile = item.FilePath != null ? "/upload/" + item.FilePath : "/image/" + "No.png";
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -45,6 +44,6 @@
                 <img style="height:50px" src="@pathToFile" />
             </td>
         </tr>
-        }
+}
     </tbody>
 </table>

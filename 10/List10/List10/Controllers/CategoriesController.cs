@@ -156,7 +156,6 @@ namespace List10.Controllers
                     string uploadFolder = Path.Combine(_hostingEnvironment.WebRootPath, "upload");
                     string filePath = Path.Combine(uploadFolder, article.FilePath);
 
-
                     if (System.IO.File.Exists(filePath))
                     {
                         try
@@ -171,8 +170,6 @@ namespace List10.Controllers
                         article.FormFile = null;
                         _context.Article.Remove(article);
                     }
-                    
-
                 }
                 else
                 {
