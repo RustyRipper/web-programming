@@ -1,0 +1,87 @@
+﻿@model List10.CartModels.OrderModel
+@{
+    ViewData["Title"] = "ConfirmOrder";
+}
+
+<h1>Confirm order</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+    </dl>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.First().Article.Name)
+            </th>
+            <th style="text-align: right">
+                @Html.DisplayNameFor(model => model.Items.First().Article.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items.First().Article.Category)
+            </th>
+            <th style="text-align: right">
+                @Html.DisplayNameFor(model => model.Items.First().Amount)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Article.Name)
+                </td>
+                <td style="text-align: right">
+                    @Html.DisplayFor(modelItem => item.Article.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Article.Category.Name)
+                </td>
+                <td style="text-align: right">
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="row">
+    <h3 style="text-align: right; margin: 0 45px">Total: @ViewBag.Total</h3>
+</div>
+
+<div>
+    <a asp-action="Index">Home</a>
+</div>

@@ -1,0 +1,90 @@
+﻿@model List10.CartModels.OrderModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Cart";
+}
+<h2>Products in order</h2>
+@if (Model.Items.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Items.First().Article.Name)
+                </th>
+                <th style="text-align: right">
+                    @Html.DisplayNameFor(model => model.Items.First().Article.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Items.First().Article.Category)
+                </th>
+                <th style="text-align: right">
+                    @Html.DisplayNameFor(model => model.Items.First().Amount)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Article.Name)
+                    </td>
+                    <td style="text-align: right">
+                        @Html.DisplayFor(modelItem => item.Article.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Article.Category.Name)
+                    </td>
+                    <td style="text-align: right">
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row">
+        <h3 style="text-align: right; margin: 0 45px">Total: @ViewBag.Total</h3>
+
+    </div>
+    <hr />
+    <h2>Personal data</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="ConfirmOrder">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">FName:</label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Surname" class="control-label">SName:</label>
+                    <input asp-for="Surname" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label">Phone:</label>
+                    <input asp-for="Phone" type="tel" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label">Address:</label>
+                    <input asp-for="Address" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PaymentMethod" class="control-label">Payment method:</label>
+                    <input asp-for="PaymentMethod" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Confirm order" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+}
+else
+{
+    <h2 style="text-align: center; margin-top: 50px;">Your cart is empty.</h2>
+}
